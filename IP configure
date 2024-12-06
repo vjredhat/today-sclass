@@ -1,0 +1,10 @@
+vi /etc/selinux/config (disabled)
+vi /etc/ssh/sshd_config (if we want to change port)
+setenforce 0
+service restart sshd
+firewall-cmd port add(firewall-cmd --permanent --add-port=225/tcp)
+firewall reload      (firewall-cmd --reload)
+network file me ip add 
+(vi /etc/sysconfig/network-scripts/ifcfg-ens18)
+
+network manager restart
